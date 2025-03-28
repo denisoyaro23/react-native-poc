@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { WebView } from 'react-native-webview';
-import responseBody from '../../assets/response_body.json';
+import responseBody from '../../assets/response_body.json'
 
 export default function HomeScreen() {
   const webRef = useRef(null);
@@ -12,7 +12,7 @@ export default function HomeScreen() {
   useEffect(() => {
     const fetchScript = async () => {
       try {
-        console.log(`ResponseBody: ${JSON.stringify(responseBody)}`)
+        console.log(`responseBody: ${JSON.stringify(responseBody)}`)
         const scriptContent = `
         ${responseBody.script}
         true; // note: this is required, or you'll sometimes get silent failures`;
